@@ -5,9 +5,9 @@
 ---
 
 ### ⬇️ Download the latest release ⬇️
-#### [Download](https://github.com/zphrexx-official/Nexus-AI/releases/latest)
+### [Download](https://github.com/zphrexx-official/Nexus-AI/releases/latest)
 
-Download the newest version from the Releases page.
+#### Download the newest version from the Releases page.
 
 ---
 
