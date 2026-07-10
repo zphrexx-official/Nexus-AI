@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexus AI</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#0f1117;
+    color:white;
+    line-height:1.7;
+}
+
+
+
+header{
+    background:linear-gradient(135deg,#151b26,#202a38);
+    padding:65px 20px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,220,255,.15);
+}
+
+
+header h1{
+    font-size:52px;
+    letter-spacing:3px;
+}
+
+
+header p{
+    color:#b5c1d1;
+    font-size:20px;
+    margin-top:10px;
+}
+
+
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+
+.card{
+
+    background:#141922;
+
+    margin:35px 0;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(0,220,255,.25);
+
+    box-shadow:
+    0 0 20px rgba(0,220,255,.08);
+
+    text-align:center;
+
+    scroll-margin-top:80px;
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    border-color:#00d9ff;
+
+    box-shadow:
+    0 0 35px rgba(0,220,255,.25);
+
+}
+
+
+
+.language{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:40px;
+
+}
+
+
+
+.language h1{
+
+    font-size:60px;
+
+}
+
+
+
+.language p{
+
+    color:#aaa;
+
+    font-size:22px;
+
+    margin:20px;
+
+}
+
+
+
+
+.lang-button{
+
+
+    background:#121720;
+
+    color:white;
+
+    border:2px solid #00d9ff;
+
+    padding:18px 60px;
+
+    margin:12px;
+
+    border-radius:14px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.lang-button:hover{
+
+    box-shadow:
+    0 0 35px #00d9ff;
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+.section-button{
+
+    display:inline-block;
+
+    background:#121720;
+
+    color:white;
+
+    text-decoration:none;
+
+    border:1px solid #00ff99;
+
+    padding:12px 25px;
+
+    margin:8px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.section-button:hover{
+
+    box-shadow:
+    0 0 30px #00ff99;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+.navigation{
+
+    text-align:center;
+
+}
+
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+.cyan{
+    color:#6dfcff;
+}
+
+.green{
+    color:#00ff99;
+}
+
+.blue{
+    color:#00d9ff;
+}
+
+.purple{
+    color:#bb86fc;
+}
+
+.orange{
+    color:#ffb347;
+}
+
+
+
+ul{
+
+    display:inline-block;
+
+    text-align:left;
+
+}
+
+
+
+li{
+
+    margin:8px;
+
+}
+
+
+
+
+.popup{
+
+    position:fixed;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+
+    width:360px;
+
+    background:#141922;
+
+    border:1px solid #00d9ff;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    box-shadow:
+    0 0 40px rgba(0,220,255,.35);
+
+    text-align:center;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+
+
+
+.footer{
+
+    text-align:center;
+
+    color:#888;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}
+
+
+
+code{
+
+    color:#00ff99;
+
+}
+
+
+</style>
+
+
+<script>
+
+function showLanguage(lang){
+
+    document.getElementById("language").style.display="none";
+
+    document.getElementById(lang).style.display="block";
+
+}
+
+</script>
+
+
+</head>
+
+
+<body>
+
+
+
+<div id="language" class="language">
+
+
+<h1>NEXUS AI</h1>
+
+
+<p>Select language</p>
+
+
+<button class="lang-button" onclick="showLanguage('ru')">
+
+Русский
+
+</button>
+
+
+<button class="lang-button" onclick="showLanguage('en')">
+
+English
+
+</button>
+
+
+
+<div class="footer">
+
+Nexus AI © 2026
+
+<br>
+
+Created by <b>@zphrexx-official</b>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div id="ru" class="hidden">
+
+
+
+<header>
+
+<h1>NEXUS AI</h1>
+
+<p>Computer Assistant</p>
+
+<p>Created by <b>@zphrexx-official</b></p>
+
+</header>
+
+
+
+<div class="container">
+
+
+<div class="card navigation">
+
+
+<a class="section-button" href="#ru-about">
+О Nexus AI
+</a>
+
+
+<a class="section-button" href="#ru-name">
+Название Nexus
+</a>
+
+
+<a class="section-button" href="#ru-command">
+Команды
+</a>
+
+
+<a class="section-button" href="#ru-question">
+Nexus Questions
+</a>
+
+
+<a class="section-button" href="#game">
+Game
+</a>
+
+
+<a class="section-button" href="#ru-project">
+Проект
+</a>
+
+
+</div>
+
+
+
+
+<div class="card" id="ru-about">
+
+
+<h2 class="cyan">
+Что такое Nexus AI?
+</h2>
+
+
+<p>
+Nexus AI — это компьютерный ассистент,
+созданный для того, чтобы сделать работу
+с компьютером проще и удобнее.
+</p>
+
+
+<p>
+Он объединяет полезные системные инструменты,
+информацию о компьютере и операции с файлами
+в одном командном интерфейсе.
+</p>
+
+
+<p>
+Nexus работает как отдельное приложение,
+которое помогает выполнять задачи быстрее.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card" id="ru-name">
+
+
+<h2 class="green">
+Значение названия Nexus
+</h2>
+
+
+<p>
+Nexus означает "связь".
+</p>
+
+
+<p>
+Название показывает идею объединения
+команд и возможностей компьютера
+в одном приложении.
+</p>
+
+
+</div>
+
+<div class="card" id="ru-command">
+
+
+<h2 class="blue">
+Команды Nexus AI
+</h2>
+
+
+<p><code>help</code> — список команд.</p>
+
+<p><code>about</code> — информация о Nexus AI.</p>
+
+<p><code>system</code> — информация о компьютере.</p>
+
+<p><code>battery</code> — отчёт батареи.</p>
+
+<p><code>big_report</code> — полный отчёт.</p>
+
+<p><code>search</code> — поиск файлов.</p>
+
+<p><code>open</code> — открытие программ.</p>
+
+<p><code>exit</code> — выход.</p>
+
+
+</div>
+
+
+
+
+
+<div class="card" id="ru-question">
+
+
+<h2 class="purple">
+Nexus Questions
+</h2>
+
+
+<ul>
+
+<li>кто ты?</li>
+
+<li>как тебя зовут?</li>
+
+<li>какое у тебя имя?</li>
+
+<li>почему тебя создали?</li>
+
+<li>зачем тебя создали?</li>
+
+<li>какая у тебя цель?</li>
+
+<li>у тебя есть мозг?</li>
+
+<li>ты можешь помочь мне?</li>
+
+<li>ты счастлив?</li>
+
+<li>ты живой?</li>
+
+<li>у тебя есть чувства?</li>
+
+<li>ты умный?</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="card" id="game">
+
+
+<h2 class="cyan">
+Nexus Reaction Test
+</h2>
+
+
+<p>
+Test your reaction speed.
+</p>
+
+
+<button id="reactionButton"
+class="section-button"
+onclick="startReaction()">
+
+Start Game
+
+</button>
+
+
+<h3 id="reactionText"></h3>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card" id="ru-project">
+
+
+<h2 class="cyan">
+Информация о проекте
+</h2>
+
+
+<p><b>Название:</b> Nexus AI</p>
+
+<p><b>Создатель:</b> @zphrexx-official</p>
+
+<p><b>Язык:</b> Python</p>
+
+<p><b>Платформы:</b> Windows, macOS, Linux</p>
+
+
+<br>
+
+
+<a class="section-button"
+href="https://github.com/zphrexx-official/Nexus-AI">
+
+GitHub Project
+
+</a>
+
+
+<a class="section-button"
+href="https://github.com/zphrexx-official">
+
+Creator Profile
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="en" class="hidden">
+
+
+<header>
+
+<h1>NEXUS AI</h1>
+
+<p>Computer Assistant</p>
+
+<p>Created by <b>@zphrexx-official</b></p>
+
+</header>
+
+
+
+
+<div class="container">
+
+
+<div class="card navigation">
+
+
+<a class="section-button" href="#en-about">
+About Nexus AI
+</a>
+
+
+<a class="section-button" href="#en-name">
+Nexus Meaning
+</a>
+
+
+<a class="section-button" href="#en-command">
+Commands
+</a>
+
+
+<a class="section-button" href="#en-question">
+Nexus Questions
+</a>
+
+
+<a class="section-button" href="#game">
+Game
+</a>
+
+
+<a class="section-button" href="#en-project">
+Project
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" id="en-about">
+
+
+<h2 class="cyan">
+What is Nexus AI?
+</h2>
+
+
+<p>
+Nexus AI is a computer assistant created
+to make computer interaction simpler
+and more convenient.
+</p>
+
+
+<p>
+It combines useful system tools,
+computer information and file operations
+in one simple command interface.
+</p>
+
+
+<p>
+Nexus works as a standalone application
+that helps users complete common tasks faster.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" id="en-name">
+
+
+<h2 class="green">
+The Meaning of Nexus
+</h2>
+
+
+<p>
+Nexus means "connection".
+</p>
+
+
+<p>
+The name represents combining commands,
+tools and computer abilities in one application.
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" id="en-question">
+
+
+<h2 class="purple">
+Nexus Questions
+</h2>
+
+
+<ul>
+
+<li>who are you?</li>
+
+<li>what is your name?</li>
+
+<li>what is your name called?</li>
+
+<li>why were you created?</li>
+
+<li>what were you created for?</li>
+
+<li>what is your purpose?</li>
+
+<li>do you have a brain?</li>
+
+<li>can you help me?</li>
+
+<li>are you happy?</li>
+
+<li>are you alive?</li>
+
+<li>do you have feelings?</li>
+
+<li>are you smart?</li>
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card" id="en-project">
+
+
+<h2 class="cyan">
+Project Information
+</h2>
+
+
+<p><b>Name:</b> Nexus AI</p>
+
+<p><b>Creator:</b> @zphrexx-official</p>
+
+<p><b>Language:</b> Python</p>
+
+<p><b>Platforms:</b> Windows, macOS, Linux</p>
+
+
+<br>
+
+
+<a class="section-button"
+href="https://github.com/zphrexx-official/Nexus-AI">
+
+GitHub Project
+
+</a>
+
+
+<a class="section-button"
+href="https://github.com/zphrexx-official">
+
+Creator Profile
+
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="popup" id="gamePopup">
+
+
+<h3>
+Nexus AI
+</h3>
+
+
+<p>
+Bored reading?
+<br>
+Try a small game.
+</p>
+
+
+<button class="section-button"
+onclick="openGame()">
+
+Play
+
+</button>
+
+
+<button class="section-button"
+onclick="disablePopup()">
+
+Don't show again
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+let gameStarted = false;
+let reactionStart = 0;
+let waiting = false;
+
+
+
+function startReaction(){
+
+
+    if(gameStarted){
+        return;
+    }
+
+
+    gameStarted = true;
+    waiting = true;
+
+
+    let button = document.getElementById("reactionButton");
+    let text = document.getElementById("reactionText");
+
+
+    button.innerHTML = "Wait...";
+
+    text.innerHTML = "";
+
+
+
+    // защита от спама кликов во время ожидания
+    button.onclick = function(){
+
+
+        if(waiting){
+
+
+            text.innerHTML =
+            "Too early!<br>Try again.";
+
+
+            button.innerHTML="Start Game";
+
+
+            gameStarted=false;
+            waiting=false;
+
+
+            button.onclick=startReaction;
+
+
+        }
+
+
+    };
+
+
+
+
+    let delay = Math.random()*4000+2000;
+
+
+
+    setTimeout(()=>{
+
+
+        waiting=false;
+
+
+        button.innerHTML="Click Here";
+
+
+        reactionStart=Date.now();
+
+
+
+        button.onclick=function(){
+
+
+
+            let result =
+            Date.now()-reactionStart;
+
+
+
+            text.innerHTML =
+            "Reaction time: "
+            + result
+            + " ms";
+
+
+
+            button.innerHTML="Start Game";
+
+
+
+            gameStarted=false;
+
+
+
+            button.onclick=startReaction;
+
+
+
+        };
+
+
+
+    },delay);
+
+
+}
+
+
+
+
+
+
+function openGame(){
+
+document.getElementById("gamePopup").style.display="none";
+
+document.getElementById("game").scrollIntoView();
+
+}
+
+
+
+
+
+function disablePopup(){
+
+localStorage.setItem(
+"disableGamePopup",
+"true"
+);
+
+
+document.getElementById("gamePopup").style.display="none";
+
+}
+
+
+
+
+
+setInterval(()=>{
+
+
+if(localStorage.getItem("disableGamePopup")!="true"){
+
+
+document.getElementById("gamePopup").style.display="block";
+
+
+}
+
+
+},30000);
+
+
+
+</script>
+
+
+
+
+
+<div class="footer">
+
+Nexus AI © 2026
+
+<br>
+
+Created by <b>@zphrexx-official</b>
+
+</div>
+
+
+
+</body>
+
+</html>
